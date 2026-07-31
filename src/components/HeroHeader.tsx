@@ -12,9 +12,7 @@ export const HeroHeader: React.FC = () => {
         {/* Main Title */}
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F0F4FF] leading-[1.15]">
           Do Zero ao Primeiro <br className="hidden sm:inline" />
-          <span className="bg-gradient-to-r from-[#00F0FF] via-[#3B6FFF] to-[#8B3FFF] bg-clip-text text-transparent">
-            Micro SaaS & Site Lucrativo
-          </span>
+          Micro SaaS & Site Lucrativo
         </h1>
 
         {/* Subtitle */}
@@ -26,8 +24,8 @@ export const HeroHeader: React.FC = () => {
         {/* Social Proof & Metrics Cards Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
           <div className="glass-card p-4 rounded-xl border border-white/5 space-y-1">
-            <div className="flex items-center gap-1.5 text-[#00F0FF] font-mono font-bold text-lg sm:text-xl">
-              <Award size={18} />
+            <div className="flex items-center gap-1.5 text-[#F0F4FF] font-mono font-bold text-lg sm:text-xl">
+              <Award size={18} className="text-[#00F0FF]" />
               <span>5+ Anos</span>
             </div>
             <p className="text-[11px] text-[#8A9BC4] font-light leading-snug">
@@ -36,8 +34,8 @@ export const HeroHeader: React.FC = () => {
           </div>
 
           <div className="glass-card p-4 rounded-xl border border-white/5 space-y-1">
-            <div className="flex items-center gap-1.5 text-[#3B6FFF] font-mono font-bold text-lg sm:text-xl">
-              <ShieldCheck size={18} />
+            <div className="flex items-center gap-1.5 text-[#F0F4FF] font-mono font-bold text-lg sm:text-xl">
+              <ShieldCheck size={18} className="text-[#3B6FFF]" />
               <span>+5 Dígitos</span>
             </div>
             <p className="text-[11px] text-[#8A9BC4] font-light leading-snug">
@@ -46,8 +44,8 @@ export const HeroHeader: React.FC = () => {
           </div>
 
           <div className="glass-card p-4 rounded-xl border border-white/5 space-y-1">
-            <div className="flex items-center gap-1.5 text-[#8B3FFF] font-mono font-bold text-lg sm:text-xl">
-              <BookOpen size={18} />
+            <div className="flex items-center gap-1.5 text-[#F0F4FF] font-mono font-bold text-lg sm:text-xl">
+              <BookOpen size={18} className="text-[#8B3FFF]" />
               <span>11 Módulos</span>
             </div>
             <p className="text-[11px] text-[#8A9BC4] font-light leading-snug">
@@ -55,18 +53,27 @@ export const HeroHeader: React.FC = () => {
             </p>
           </div>
 
-          <div className="glass-card p-4 rounded-xl border border-white/5 space-y-1">
+          <div className="glass-card p-4 rounded-xl border border-white/5 space-y-1.5">
             <a 
               href="https://instagram.com/davi._link" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-[#00F0FF] hover:text-white font-mono font-bold text-sm sm:text-base transition-colors"
+              className="flex items-center gap-1.5 text-[#F0F4FF] hover:text-[#00F0FF] font-mono font-bold text-xs sm:text-sm transition-colors"
             >
-              <Instagram size={18} className="text-[#00F0FF]" />
+              <Instagram size={15} className="text-[#00F0FF] shrink-0" />
               <span>@davi._link</span>
             </a>
-            <p className="text-[11px] text-[#8A9BC4] font-light leading-snug">
-              Link oficial da Bio
+            <a 
+              href="https://www.instagram.com/layon.dev/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[#F0F4FF] hover:text-[#00F0FF] font-mono font-bold text-xs sm:text-sm transition-colors"
+            >
+              <Instagram size={15} className="text-[#00F0FF] shrink-0" />
+              <span>@layon.dev</span>
+            </a>
+            <p className="text-[10px] text-[#8A9BC4] font-light leading-snug pt-0.5">
+              Perfis Oficiais
             </p>
           </div>
         </div>

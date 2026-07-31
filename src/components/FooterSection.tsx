@@ -36,48 +36,69 @@ export const FooterSection: React.FC = () => {
         </div>
 
         {/* Contact & Social Links */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto">
-          {/* Instagram Button */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto">
+          {/* Instagram @davi._link */}
           <a
             href="https://instagram.com/davi._link"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-4 rounded-xl glass-card hover:border-[#00F0FF]/50 flex items-center justify-between group transition-all"
+            className="p-3.5 rounded-xl glass-card hover:border-[#00F0FF]/50 flex items-center justify-between group transition-all"
           >
-            <div className="flex items-center gap-3">
-              <div className="p-2.5 rounded-lg bg-[#00F0FF]/10 text-[#00F0FF] border border-[#00F0FF]/20">
-                <Instagram size={20} />
+            <div className="flex items-center gap-2.5">
+              <div className="p-2 rounded-lg bg-[#00F0FF]/10 text-[#00F0FF] border border-[#00F0FF]/20">
+                <Instagram size={18} />
               </div>
               <div className="text-left">
-                <span className="text-xs font-mono text-[#8A9BC4] uppercase block">Instagram Oficial</span>
-                <span className="text-sm font-semibold text-[#F0F4FF] group-hover:text-[#00F0FF] transition-colors">
+                <span className="text-[10px] font-mono text-[#8A9BC4] uppercase block">Instagram</span>
+                <span className="text-xs sm:text-sm font-semibold text-[#F0F4FF] group-hover:text-[#00F0FF] transition-colors">
                   @davi._link
                 </span>
               </div>
             </div>
-            <ExternalLink size={16} className="text-[#8A9BC4] group-hover:text-[#00F0FF] transition-colors" />
+            <ExternalLink size={14} className="text-[#8A9BC4] group-hover:text-[#00F0FF] transition-colors" />
+          </a>
+
+          {/* Instagram @layon.dev */}
+          <a
+            href="https://www.instagram.com/layon.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3.5 rounded-xl glass-card hover:border-[#00F0FF]/50 flex items-center justify-between group transition-all"
+          >
+            <div className="flex items-center gap-2.5">
+              <div className="p-2 rounded-lg bg-[#00F0FF]/10 text-[#00F0FF] border border-[#00F0FF]/20">
+                <Instagram size={18} />
+              </div>
+              <div className="text-left">
+                <span className="text-[10px] font-mono text-[#8A9BC4] uppercase block">Instagram</span>
+                <span className="text-xs sm:text-sm font-semibold text-[#F0F4FF] group-hover:text-[#00F0FF] transition-colors">
+                  @layon.dev
+                </span>
+              </div>
+            </div>
+            <ExternalLink size={14} className="text-[#8A9BC4] group-hover:text-[#00F0FF] transition-colors" />
           </a>
 
           {/* Email Button */}
           <button
             onClick={handleCopyEmail}
-            className="p-4 rounded-xl glass-card hover:border-[#3B6FFF]/50 flex items-center justify-between group transition-all text-left cursor-pointer"
+            className="p-3.5 rounded-xl glass-card hover:border-[#3B6FFF]/50 flex items-center justify-between group transition-all text-left cursor-pointer"
           >
-            <div className="flex items-center gap-3">
-              <div className="p-2.5 rounded-lg bg-[#3B6FFF]/10 text-[#3B6FFF] border border-[#3B6FFF]/20">
-                <Mail size={20} />
+            <div className="flex items-center gap-2.5">
+              <div className="p-2 rounded-lg bg-[#3B6FFF]/10 text-[#3B6FFF] border border-[#3B6FFF]/20">
+                <Mail size={18} />
               </div>
               <div>
-                <span className="text-xs font-mono text-[#8A9BC4] uppercase block">Suporte Direto</span>
-                <span className="text-sm font-semibold text-[#F0F4FF] group-hover:text-[#00F0FF] transition-colors">
+                <span className="text-[10px] font-mono text-[#8A9BC4] uppercase block">Suporte</span>
+                <span className="text-xs font-semibold text-[#F0F4FF] group-hover:text-[#00F0FF] transition-colors truncate block max-w-[100px]">
                   {email}
                 </span>
               </div>
             </div>
             {copiedEmail ? (
-              <Check size={16} className="text-[#00F0FF]" />
+              <Check size={14} className="text-[#00F0FF]" />
             ) : (
-              <Copy size={16} className="text-[#8A9BC4] group-hover:text-[#00F0FF] transition-colors" />
+              <Copy size={14} className="text-[#8A9BC4] group-hover:text-[#00F0FF] transition-colors" />
             )}
           </button>
         </div>

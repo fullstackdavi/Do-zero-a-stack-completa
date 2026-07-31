@@ -57,8 +57,13 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
       {/* MOBILE STICKY TOP BAR */}
       <header className="lg:hidden sticky top-0 z-40 bg-[#0A1128]/90 backdrop-blur-md border-b border-white/10 px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-[#3B6FFF]/20 border border-[#3B6FFF]/40 flex items-center justify-center text-[#00F0FF] font-mono font-bold text-sm">
-            DS
+          <div className="w-10 h-10 flex items-center justify-center overflow-hidden shrink-0">
+            <img
+              src="https://i.postimg.cc/28s8ngJm/upload-iq-B-k-O9Re-Ky-LCDzl-Hrsu-Q-removebg-preview.png"
+              alt="DS Company Logo"
+              className="w-full h-full object-contain"
+              referrerPolicy="no-referrer"
+            />
           </div>
           <div>
             <span className="text-xs font-mono font-bold text-[#F0F4FF] block leading-tight">
@@ -70,15 +75,27 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           <a
             href="https://instagram.com/davi._link"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-lg bg-white/5 border border-white/10 text-[#00F0FF] text-xs font-mono flex items-center gap-1"
+            className="p-1.5 sm:p-2 rounded-lg bg-white/5 border border-white/10 text-[#00F0FF] text-[11px] sm:text-xs font-mono flex items-center gap-1"
+            title="Instagram @davi._link"
           >
             <Instagram size={14} />
             <span className="hidden sm:inline">@davi._link</span>
+          </a>
+
+          <a
+            href="https://www.instagram.com/layon.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1.5 sm:p-2 rounded-lg bg-white/5 border border-white/10 text-[#00F0FF] text-[11px] sm:text-xs font-mono flex items-center gap-1"
+            title="Instagram @layon.dev"
+          >
+            <Instagram size={14} />
+            <span className="hidden sm:inline">@layon.dev</span>
           </a>
 
           <button
@@ -157,10 +174,13 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
           {/* Header Brand */}
           <div className="space-y-2">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#3B6FFF] to-[#00F0FF] p-[1px]">
-                <div className="w-full h-full bg-[#0A1128] rounded-[11px] flex items-center justify-center font-mono font-bold text-sm text-[#00F0FF]">
-                  DS
-                </div>
+              <div className="w-12 h-12 flex items-center justify-center overflow-hidden shrink-0">
+                <img
+                  src="https://i.postimg.cc/28s8ngJm/upload-iq-B-k-O9Re-Ky-LCDzl-Hrsu-Q-removebg-preview.png"
+                  alt="DS Company Logo"
+                  className="w-full h-full object-contain"
+                  referrerPolicy="no-referrer"
+                />
               </div>
               <div>
                 <h3 className="font-mono font-bold text-sm text-[#F0F4FF] leading-none">
@@ -181,6 +201,19 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
               <div className="flex items-center gap-2">
                 <Instagram size={15} className="text-[#00F0FF]" />
                 <span>@davi._link</span>
+              </div>
+              <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/layon.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 flex items-center justify-between p-2.5 rounded-xl bg-[#0F1B38] border border-white/10 hover:border-[#00F0FF]/40 text-xs font-mono text-[#8A9BC4] hover:text-[#00F0FF] transition-all group"
+            >
+              <div className="flex items-center gap-2">
+                <Instagram size={15} className="text-[#00F0FF]" />
+                <span>@layon.dev</span>
               </div>
               <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
