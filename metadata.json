@@ -1,0 +1,6 @@
+{
+  "name": "DS Company - Guia Oficial de Vibe Coding & Micro SaaS",
+  "description": "Guia gratuito oficial da DS Company® para bio do Instagram (@davi._link). Aprenda Vibe Coding, Claude Code, MCP, e como criar sites e Micro SaaS lucrativos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
