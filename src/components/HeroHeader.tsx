@@ -9,12 +9,6 @@ export const HeroHeader: React.FC = () => {
       <div className="absolute bottom-0 right-10 w-80 h-80 bg-[#00F0FF]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-4xl mx-auto space-y-6 text-center sm:text-left relative z-10">
-        {/* Badge Header */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#3B6FFF]/15 border border-[#3B6FFF]/30 text-[#00F0FF] text-xs font-mono font-semibold uppercase tracking-widest backdrop-blur-md">
-          <Zap size={14} className="text-[#00F0FF] animate-pulse" />
-          <span>DS COMPANY® · GUIA OFICIAL GRATUITO</span>
-        </div>
-
         {/* Main Title */}
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F0F4FF] leading-[1.15]">
           Do Zero ao Primeiro <br className="hidden sm:inline" />
