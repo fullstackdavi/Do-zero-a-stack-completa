@@ -72,6 +72,15 @@ export const HeroHeader: React.FC = () => {
               <Instagram size={15} className="text-[#00F0FF] shrink-0" />
               <span>@layon.dev</span>
             </a>
+            <a 
+              href="https://www.instagram.com/lz_.page/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[#F0F4FF] hover:text-[#00F0FF] font-mono font-bold text-xs sm:text-sm transition-colors"
+            >
+              <Instagram size={15} className="text-[#00F0FF] shrink-0" />
+              <span>@lz_.page</span>
+            </a>
             <p className="text-[10px] text-[#8A9BC4] font-light leading-snug pt-0.5">
               Perfis Oficiais
             </p>

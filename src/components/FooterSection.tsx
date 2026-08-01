@@ -36,7 +36,7 @@ export const FooterSection: React.FC = () => {
         </div>
 
         {/* Contact & Social Links */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl mx-auto">
           {/* Instagram @davi._link */}
           <a
             href="https://instagram.com/davi._link"
@@ -45,17 +45,17 @@ export const FooterSection: React.FC = () => {
             className="p-3.5 rounded-xl glass-card hover:border-[#00F0FF]/50 flex items-center justify-between group transition-all"
           >
             <div className="flex items-center gap-2.5">
-              <div className="p-2 rounded-lg bg-[#00F0FF]/10 text-[#00F0FF] border border-[#00F0FF]/20">
+              <div className="p-2 rounded-lg bg-[#00F0FF]/10 text-[#00F0FF] border border-[#00F0FF]/20 shrink-0">
                 <Instagram size={18} />
               </div>
               <div className="text-left">
                 <span className="text-[10px] font-mono text-[#8A9BC4] uppercase block">Instagram</span>
-                <span className="text-xs sm:text-sm font-semibold text-[#F0F4FF] group-hover:text-[#00F0FF] transition-colors">
+                <span className="text-xs font-semibold text-[#F0F4FF] group-hover:text-[#00F0FF] transition-colors">
                   @davi._link
                 </span>
               </div>
             </div>
-            <ExternalLink size={14} className="text-[#8A9BC4] group-hover:text-[#00F0FF] transition-colors" />
+            <ExternalLink size={14} className="text-[#8A9BC4] group-hover:text-[#00F0FF] transition-colors shrink-0" />
           </a>
 
           {/* Instagram @layon.dev */}
@@ -66,17 +66,38 @@ export const FooterSection: React.FC = () => {
             className="p-3.5 rounded-xl glass-card hover:border-[#00F0FF]/50 flex items-center justify-between group transition-all"
           >
             <div className="flex items-center gap-2.5">
-              <div className="p-2 rounded-lg bg-[#00F0FF]/10 text-[#00F0FF] border border-[#00F0FF]/20">
+              <div className="p-2 rounded-lg bg-[#00F0FF]/10 text-[#00F0FF] border border-[#00F0FF]/20 shrink-0">
                 <Instagram size={18} />
               </div>
               <div className="text-left">
                 <span className="text-[10px] font-mono text-[#8A9BC4] uppercase block">Instagram</span>
-                <span className="text-xs sm:text-sm font-semibold text-[#F0F4FF] group-hover:text-[#00F0FF] transition-colors">
+                <span className="text-xs font-semibold text-[#F0F4FF] group-hover:text-[#00F0FF] transition-colors">
                   @layon.dev
                 </span>
               </div>
             </div>
-            <ExternalLink size={14} className="text-[#8A9BC4] group-hover:text-[#00F0FF] transition-colors" />
+            <ExternalLink size={14} className="text-[#8A9BC4] group-hover:text-[#00F0FF] transition-colors shrink-0" />
+          </a>
+
+          {/* Instagram @lz_.page */}
+          <a
+            href="https://www.instagram.com/lz_.page/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3.5 rounded-xl glass-card hover:border-[#00F0FF]/50 flex items-center justify-between group transition-all"
+          >
+            <div className="flex items-center gap-2.5">
+              <div className="p-2 rounded-lg bg-[#00F0FF]/10 text-[#00F0FF] border border-[#00F0FF]/20 shrink-0">
+                <Instagram size={18} />
+              </div>
+              <div className="text-left">
+                <span className="text-[10px] font-mono text-[#8A9BC4] uppercase block">Instagram</span>
+                <span className="text-xs font-semibold text-[#F0F4FF] group-hover:text-[#00F0FF] transition-colors">
+                  @lz_.page
+                </span>
+              </div>
+            </div>
+            <ExternalLink size={14} className="text-[#8A9BC4] group-hover:text-[#00F0FF] transition-colors shrink-0" />
           </a>
 
           {/* Email Button */}

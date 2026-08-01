@@ -98,6 +98,17 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
             <span className="hidden sm:inline">@layon.dev</span>
           </a>
 
+          <a
+            href="https://www.instagram.com/lz_.page/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1.5 sm:p-2 rounded-lg bg-white/5 border border-white/10 text-[#00F0FF] text-[11px] sm:text-xs font-mono flex items-center gap-1"
+            title="Instagram @lz_.page"
+          >
+            <Instagram size={14} />
+            <span className="hidden sm:inline">@lz_.page</span>
+          </a>
+
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="p-2 rounded-lg bg-[#3B6FFF]/20 border border-[#3B6FFF]/40 text-[#F0F4FF] cursor-pointer"
@@ -214,6 +225,19 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
               <div className="flex items-center gap-2">
                 <Instagram size={15} className="text-[#00F0FF]" />
                 <span>@layon.dev</span>
+              </div>
+              <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/lz_.page/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 flex items-center justify-between p-2.5 rounded-xl bg-[#0F1B38] border border-white/10 hover:border-[#00F0FF]/40 text-xs font-mono text-[#8A9BC4] hover:text-[#00F0FF] transition-all group"
+            >
+              <div className="flex items-center gap-2">
+                <Instagram size={15} className="text-[#00F0FF]" />
+                <span>@lz_.page</span>
               </div>
               <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
