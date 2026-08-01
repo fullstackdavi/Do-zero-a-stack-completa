@@ -1,17 +1,7 @@
-import React, { useState } from 'react';
-import { Instagram, Mail, Copy, Check, Heart, ShieldCheck, ExternalLink, Zap } from 'lucide-react';
+import React from 'react';
+import { Instagram, Zap, ExternalLink } from 'lucide-react';
 
 export const FooterSection: React.FC = () => {
-  const [copiedEmail, setCopiedEmail] = useState(false);
-
-  const email = 'suporte@dscompany.com';
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(email);
-    setCopiedEmail(true);
-    setTimeout(() => setCopiedEmail(false), 2000);
-  };
-
   return (
     <footer className="mt-16 sm:mt-24 pt-12 pb-16 px-4 sm:px-8 border-t border-white/10 bg-noise relative overflow-hidden">
       {/* Background Accent Glow */}
@@ -36,7 +26,7 @@ export const FooterSection: React.FC = () => {
         </div>
 
         {/* Contact & Social Links */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
           {/* Instagram @davi._link */}
           <a
             href="https://instagram.com/davi._link"
@@ -99,29 +89,6 @@ export const FooterSection: React.FC = () => {
             </div>
             <ExternalLink size={14} className="text-[#8A9BC4] group-hover:text-[#00F0FF] transition-colors shrink-0" />
           </a>
-
-          {/* Email Button */}
-          <button
-            onClick={handleCopyEmail}
-            className="p-3.5 rounded-xl glass-card hover:border-[#3B6FFF]/50 flex items-center justify-between group transition-all text-left cursor-pointer"
-          >
-            <div className="flex items-center gap-2.5">
-              <div className="p-2 rounded-lg bg-[#3B6FFF]/10 text-[#3B6FFF] border border-[#3B6FFF]/20">
-                <Mail size={18} />
-              </div>
-              <div>
-                <span className="text-[10px] font-mono text-[#8A9BC4] uppercase block">Suporte</span>
-                <span className="text-xs font-semibold text-[#F0F4FF] group-hover:text-[#00F0FF] transition-colors truncate block max-w-[100px]">
-                  {email}
-                </span>
-              </div>
-            </div>
-            {copiedEmail ? (
-              <Check size={14} className="text-[#00F0FF]" />
-            ) : (
-              <Copy size={14} className="text-[#8A9BC4] group-hover:text-[#00F0FF] transition-colors" />
-            )}
-          </button>
         </div>
 
         {/* Copyright & Footnote */}

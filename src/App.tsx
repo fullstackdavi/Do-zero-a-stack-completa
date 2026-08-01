@@ -3,6 +3,8 @@ import { modulesData } from './data/modulesData';
 import { HeroHeader } from './components/HeroHeader';
 import { HeaderNav } from './components/HeaderNav';
 import { ModuleCard } from './components/ModuleCard';
+import { BonusOfferCard } from './components/BonusOfferCard';
+import { BonusOfferCardDiscreet } from './components/BonusOfferCardDiscreet';
 import { FooterSection } from './components/FooterSection';
 import { ArrowUp, BookOpen, CheckCircle, Search, Filter } from 'lucide-react';
 
@@ -124,12 +126,19 @@ export default function App() {
           {/* Module List */}
           {filteredModules.length > 0 ? (
             filteredModules.map((module) => (
-              <ModuleCard
-                key={module.id}
-                module={module}
-                isCompleted={completedModules.includes(module.id)}
-                onToggleComplete={handleToggleComplete}
-              />
+              <React.Fragment key={module.id}>
+                <ModuleCard
+                  module={module}
+                  isCompleted={completedModules.includes(module.id)}
+                  onToggleComplete={handleToggleComplete}
+                />
+                {module.id === 'modulo-2' && (
+                  <BonusOfferCard offerLink="https://pay.kirvano.com/0a664536-3b80-46b7-b281-c63ce345623f" />
+                )}
+                {module.id === 'modulo-10' && (
+                  <BonusOfferCardDiscreet offerLink="https://pay.kirvano.com/0a664536-3b80-46b7-b281-c63ce345623f" />
+                )}
+              </React.Fragment>
             ))
           ) : (
             <div className="my-16 text-center space-y-3 p-8 glass-card rounded-2xl">
