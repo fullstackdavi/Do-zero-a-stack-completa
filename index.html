@@ -24,8 +24,47 @@
     <meta property="twitter:title" content="DS Company® · Guia Oficial Gratuito (Vibe Coding & Micro SaaS)" />
     <meta property="twitter:description" content="Aprenda a transformar ideias em software e renda real usando Vibe Coding e IA. 11 Módulos práticos sem enrolação." />
 
-    <!-- SVG Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A1128'/><text x='50%' y='65%' font-size='50' font-weight='bold' font-family='monospace' fill='%2300F0FF' text-anchor='middle'>DS</text></svg>" />
+    <!-- Rounded Favicon -->
+    <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'><defs><clipPath id='r'><rect width='128' height='128' rx='28'/></clipPath></defs><image href='https://i.postimg.cc/Zqj4bcGq/upload-iq-B-k-O9Re-Ky-LCDzl-Hrsu-Q.jpg' width='128' height='128' clip-path='url(%23r)' preserveAspectRatio='xMidYMid slice'/></svg>" />
+    <script>
+      (function() {
+        var imgUrl = "https://i.postimg.cc/Zqj4bcGq/upload-iq-B-k-O9Re-Ky-LCDzl-Hrsu-Q.jpg";
+        var img = new Image();
+        img.crossOrigin = "anonymous";
+        img.onload = function() {
+          try {
+            var canvas = document.createElement("canvas");
+            canvas.width = 128;
+            canvas.height = 128;
+            var ctx = canvas.getContext("2d");
+            if (!ctx) return;
+            var radius = 28;
+            ctx.beginPath();
+            ctx.moveTo(radius, 0);
+            ctx.lineTo(128 - radius, 0);
+            ctx.quadraticCurveTo(128, 0, 128, radius);
+            ctx.lineTo(128, 128 - radius);
+            ctx.quadraticCurveTo(128, 128, 128 - radius, 128);
+            ctx.lineTo(radius, 128);
+            ctx.quadraticCurveTo(0, 128, 0, 128 - radius);
+            ctx.lineTo(0, radius);
+            ctx.quadraticCurveTo(0, 0, radius, 0);
+            ctx.closePath();
+            ctx.clip();
+            ctx.drawImage(img, 0, 0, 128, 128);
+            
+            var link = document.getElementById("favicon");
+            if (link) {
+              link.type = "image/png";
+              link.href = canvas.toDataURL("image/png");
+            }
+          } catch (e) {
+            // SVG fallback keeps working
+          }
+        };
+        img.src = imgUrl;
+      })();
+    </script>
 
     <!-- Google Fonts: Poppins & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
