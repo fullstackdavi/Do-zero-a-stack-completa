@@ -14,6 +14,7 @@
     font-family: 'Poppins', system-ui, -apple-system, sans-serif !important;
     background-color: #0B061A;
     color: #F4F4F5;
+    overflow-x: hidden;
   }
   
   code, pre, .font-mono {
@@ -21,33 +22,66 @@
   }
 }
 
-/* DS Company Custom Minimalist Midnight Purple Glassmorphism */
+/* Scroll Reveal Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glassmorphism Cards Refinement */
 .glass-card {
-  background: rgba(18, 11, 32, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background: rgba(18, 11, 32, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card:hover {
+  background: rgba(22, 13, 39, 0.82);
   border-color: rgba(168, 85, 247, 0.35);
-  box-shadow: 0 12px 40px -10px rgba(168, 85, 247, 0.2);
+  box-shadow: 0 16px 40px -10px rgba(168, 85, 247, 0.22), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
 }
 
-/* Midnight Purple Highlight Card Style */
+/* Midnight Purple Highlight Card */
 .glass-card-purple {
-  background: linear-gradient(135deg, rgba(28, 14, 52, 0.85) 0%, rgba(12, 6, 24, 0.9) 100%);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(168, 85, 247, 0.3);
-  box-shadow: 0 12px 40px -5px rgba(168, 85, 247, 0.2);
+  background: linear-gradient(135deg, rgba(32, 16, 60, 0.88) 0%, rgba(14, 7, 28, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  box-shadow: 0 14px 40px -8px rgba(168, 85, 247, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card-purple:hover {
-  border-color: rgba(168, 85, 247, 0.6);
-  box-shadow: 0 16px 50px -5px rgba(168, 85, 247, 0.35);
+  background: linear-gradient(135deg, rgba(38, 19, 72, 0.92) 0%, rgba(18, 9, 36, 0.97) 100%);
+  border-color: rgba(168, 85, 247, 0.65);
+  box-shadow: 0 20px 50px -5px rgba(168, 85, 247, 0.38), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Subtle Interactive Glass Pill */
+.glass-pill {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-pill:hover {
+  background: rgba(168, 85, 247, 0.12);
+  border-color: rgba(168, 85, 247, 0.35);
+  color: #F4F4F5;
 }
 
 /* Noise texture overlay */
@@ -72,4 +106,14 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #a855f7;
+}
+
+/* Smooth Pulse Glow */
+@keyframes ambientGlow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(1.06); }
+}
+
+.animate-ambient-glow {
+  animation: ambientGlow 8s ease-in-out infinite;
 }

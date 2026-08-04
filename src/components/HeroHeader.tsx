@@ -3,10 +3,10 @@ import { Award, ShieldCheck, BookOpen, Instagram, Code, CheckCircle2 } from 'luc
 
 export const HeroHeader: React.FC = () => {
   return (
-    <header className="relative pt-8 pb-12 sm:pt-12 sm:pb-16 px-4 sm:px-8 border-b border-white/10 overflow-hidden bg-noise">
-      {/* Background Glow Elements - Midnight Purple Tone */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-900/25 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-10 w-80 h-80 bg-purple-950/40 rounded-full blur-3xl pointer-events-none" />
+    <header className="relative pt-8 pb-12 sm:pt-14 sm:pb-16 px-4 sm:px-8 border-b border-white/10 overflow-hidden bg-noise">
+      {/* Animated Ambient Glow Elements - Midnight Purple Tone */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-900/30 rounded-full blur-3xl pointer-events-none animate-ambient-glow" />
+      <div className="absolute bottom-0 right-10 w-80 h-80 bg-purple-950/50 rounded-full blur-3xl pointer-events-none animate-ambient-glow" style={{ animationDelay: '-4s' }} />
 
       <div className="max-w-4xl mx-auto space-y-6 text-center sm:text-left relative z-10">
         {/* Main Title */}
@@ -23,7 +23,7 @@ export const HeroHeader: React.FC = () => {
 
         {/* Social Proof & Metrics Cards Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
-          <div className="glass-card p-4 rounded-xl border border-white/5 space-y-1">
+          <div className="glass-card p-4 rounded-xl space-y-1">
             <div className="flex items-center gap-1.5 text-[#F4F4F5] font-mono font-bold text-lg sm:text-xl">
               <Award size={18} className="text-purple-400" />
               <span>5+ Anos</span>
@@ -33,7 +33,7 @@ export const HeroHeader: React.FC = () => {
             </p>
           </div>
 
-          <div className="glass-card p-4 rounded-xl border border-white/5 space-y-1">
+          <div className="glass-card p-4 rounded-xl space-y-1">
             <div className="flex items-center gap-1.5 text-[#F4F4F5] font-mono font-bold text-lg sm:text-xl">
               <ShieldCheck size={18} className="text-purple-400" />
               <span>+5 Dígitos</span>
@@ -43,7 +43,7 @@ export const HeroHeader: React.FC = () => {
             </p>
           </div>
 
-          <div className="glass-card p-4 rounded-xl border border-white/5 space-y-1">
+          <div className="glass-card p-4 rounded-xl space-y-1">
             <div className="flex items-center gap-1.5 text-[#F4F4F5] font-mono font-bold text-lg sm:text-xl">
               <BookOpen size={18} className="text-purple-400" />
               <span>11 Módulos</span>
@@ -53,7 +53,7 @@ export const HeroHeader: React.FC = () => {
             </p>
           </div>
 
-          <div className="glass-card p-4 rounded-xl border border-white/5 space-y-1.5">
+          <div className="glass-card p-4 rounded-xl space-y-1.5">
             <a 
               href="https://instagram.com/davi._link" 
               target="_blank" 
@@ -89,15 +89,15 @@ export const HeroHeader: React.FC = () => {
 
         {/* Info pills bar */}
         <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 pt-2 text-xs font-mono text-zinc-400">
-          <span className="flex items-center gap-1 px-2.5 py-1 rounded-md bg-white/5 border border-white/5">
-            <CheckCircle2 size={13} className="text-purple-400" />
+          <span className="flex items-center gap-1 px-3 py-1.5 rounded-lg glass-pill">
+            <CheckCircle2 size={14} className="text-purple-400" />
             100% Gratuito
           </span>
-          <span className="flex items-center gap-1 px-2.5 py-1 rounded-md bg-white/5 border border-white/5">
-            <Code size={13} className="text-purple-400" />
+          <span className="flex items-center gap-1 px-3 py-1.5 rounded-lg glass-pill">
+            <Code size={14} className="text-purple-400" />
             Leitura Estimada: ~25 min
           </span>
-          <span className="flex items-center gap-1 px-2.5 py-1 rounded-md bg-white/5 border border-white/5">
+          <span className="flex items-center gap-1 px-3 py-1.5 rounded-lg glass-pill">
             ⚡ Atualizado para 2026
           </span>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Copy, FileText, Download, ArrowRight } from 'lucide-react';
+import { Copy, FileText, Download, ArrowRight, Sparkles } from 'lucide-react';
 
 interface BonusOfferCardProps {
   offerLink?: string;
@@ -9,12 +9,17 @@ export const BonusOfferCard: React.FC<BonusOfferCardProps> = ({
   offerLink = 'https://pay.kirvano.com/0a664536-3b80-46b7-b281-c63ce345623f',
 }) => {
   return (
-    <div className="my-8 sm:my-12 rounded-2xl p-6 sm:p-8 relative overflow-hidden bg-gradient-to-br from-[#1c0d38] via-[#0b061a] to-[#251048] border border-purple-500/40 shadow-2xl shadow-purple-950/40">
+    <div className="my-8 sm:my-12 rounded-2xl p-6 sm:p-8 relative overflow-hidden glass-card-purple border border-purple-500/40 shadow-2xl">
       {/* Decorative Glow Elements */}
-      <div className="absolute -top-16 -right-16 w-60 h-60 rounded-full bg-purple-600/20 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-16 -left-16 w-60 h-60 rounded-full bg-purple-900/20 blur-3xl pointer-events-none" />
+      <div className="absolute -top-16 -right-16 w-60 h-60 rounded-full bg-purple-600/20 blur-3xl pointer-events-none animate-ambient-glow" />
+      <div className="absolute -bottom-16 -left-16 w-60 h-60 rounded-full bg-purple-900/20 blur-3xl pointer-events-none animate-ambient-glow" style={{ animationDelay: '-3s' }} />
 
       <div className="relative z-10 space-y-5">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-300 text-xs font-mono font-semibold uppercase tracking-wider">
+          <Sparkles size={14} />
+          <span>OFERTA ESPECIAL</span>
+        </div>
+
         {/* Title */}
         <h3 className="text-xl sm:text-2xl font-bold text-[#F4F4F5] tracking-tight leading-tight">
           Quer levar os prompts prontos, sem precisar montar do zero?
@@ -27,17 +32,17 @@ export const BonusOfferCard: React.FC<BonusOfferCardProps> = ({
 
         {/* Inline Features */}
         <div className="flex flex-wrap items-center gap-3 sm:gap-6 pt-2">
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-mono text-[#F4F4F5]">
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg glass-pill text-xs font-mono text-[#F4F4F5]">
             <Copy size={15} className="text-purple-400" />
             <span>Prompts prontos</span>
           </div>
 
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-mono text-[#F4F4F5]">
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg glass-pill text-xs font-mono text-[#F4F4F5]">
             <FileText size={15} className="text-purple-400" />
             <span>PDF offline</span>
           </div>
 
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-mono text-[#F4F4F5]">
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg glass-pill text-xs font-mono text-[#F4F4F5]">
             <Download size={15} className="text-purple-400" />
             <span>Acesso imediato</span>
           </div>
