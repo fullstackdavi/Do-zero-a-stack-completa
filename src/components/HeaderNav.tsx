@@ -69,9 +69,6 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
             <span className="text-xs font-mono font-bold text-[#F4F4F5] block leading-tight">
               DS COMPANY®
             </span>
-            <span className="text-[10px] text-zinc-400 font-mono block">
-              GUIA OFICIAL DE VIBE CODING
-            </span>
           </div>
         </div>
 
