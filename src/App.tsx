@@ -6,7 +6,7 @@ import { ModuleCard } from './components/ModuleCard';
 import { BonusOfferCard } from './components/BonusOfferCard';
 import { BonusOfferCardDiscreet } from './components/BonusOfferCardDiscreet';
 import { FooterSection } from './components/FooterSection';
-import { ArrowUp, BookOpen, CheckCircle, Search, Filter } from 'lucide-react';
+import { ArrowUp, Search, Filter } from 'lucide-react';
 
 export default function App() {
   const [activeModuleId, setActiveModuleId] = useState<string>('modulo-0');
@@ -90,7 +90,7 @@ export default function App() {
   });
 
   return (
-    <div className="min-h-screen bg-[#0A1128] text-[#F0F4FF] selection:bg-[#3B6FFF]/30 selection:text-[#00F0FF] relative">
+    <div className="min-h-screen bg-[#0B061A] text-[#F4F4F5] selection:bg-purple-900/60 selection:text-purple-200 relative">
       {/* Desktop Navigation Sidebar & Mobile Sticky Topbar */}
       <HeaderNav
         activeModuleId={activeModuleId}
@@ -109,14 +109,14 @@ export default function App() {
         <div className="max-w-4xl mx-auto px-4 sm:px-8 py-8 space-y-4">
           {/* Active Search Filter Banner */}
           {searchQuery && (
-            <div className="p-4 rounded-xl bg-[#0F1B38] border border-[#00F0FF]/30 flex items-center justify-between text-xs font-mono text-[#00F0FF]">
+            <div className="p-4 rounded-xl bg-[#150a29] border border-purple-500/30 flex items-center justify-between text-xs font-mono text-purple-300">
               <div className="flex items-center gap-2">
                 <Filter size={16} />
                 <span>Exibindo resultados para "{searchQuery}" ({filteredModules.length} módulos encontrados)</span>
               </div>
               <button
                 onClick={() => setSearchQuery('')}
-                className="underline text-[#8A9BC4] hover:text-[#F0F4FF] cursor-pointer"
+                className="underline text-zinc-400 hover:text-white cursor-pointer"
               >
                 Limpar busca
               </button>
@@ -142,16 +142,16 @@ export default function App() {
             ))
           ) : (
             <div className="my-16 text-center space-y-3 p-8 glass-card rounded-2xl">
-              <Search size={32} className="mx-auto text-[#8A9BC4]" />
-              <h3 className="text-lg font-semibold text-[#F0F4FF]">
+              <Search size={32} className="mx-auto text-zinc-400" />
+              <h3 className="text-lg font-semibold text-[#F4F4F5]">
                 Nenhum módulo encontrado para "{searchQuery}"
               </h3>
-              <p className="text-xs text-[#8A9BC4]">
+              <p className="text-xs text-zinc-400">
                 Tente buscar por termos como "Claude", "MCP", "Prompt", "SaaS" ou "Preço".
               </p>
               <button
                 onClick={() => setSearchQuery('')}
-                className="mt-3 px-4 py-2 rounded-xl bg-[#3B6FFF] text-white text-xs font-mono font-medium hover:bg-[#3B6FFF]/80 transition-all cursor-pointer"
+                className="mt-3 px-4 py-2 rounded-xl bg-purple-700 hover:bg-purple-600 text-white text-xs font-mono font-medium transition-all cursor-pointer"
               >
                 Ver Todos os Módulos
               </button>
@@ -167,7 +167,7 @@ export default function App() {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-[#3B6FFF] hover:bg-[#00F0FF] text-white hover:text-[#0A1128] shadow-2xl transition-all border border-white/20 cursor-pointer animate-fade-in"
+          className="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-purple-800 hover:bg-purple-700 text-white shadow-2xl transition-all border border-purple-500/30 cursor-pointer animate-fade-in"
           title="Voltar ao topo"
           aria-label="Voltar ao topo"
         >
